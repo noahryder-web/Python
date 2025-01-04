@@ -1,12 +1,12 @@
 #Python Challenges 
-#Reverse a String
+# (1) Reverse a String
 def reverse_string(string):
     return string[::-1]
 
 print(reverse_string("Hello")) 
 #General slicing uses [:] but then [::] tells python to move backwards and reverses it
 
-#Count Vowels
+# (2) Count Vowels
 def count_vowels(string):
     vowels = "aeiouAEIOU"
     count = 0 #We also initiate count when we are going to count things 
@@ -18,7 +18,7 @@ def count_vowels(string):
 print(count_vowels("Hello World!"))
 #Outputs 3 vowels here 
 
-#Check for Palindrome
+# (3) Check for Palindrome
 def palindrome(string):
     if string[::-1] == string:
         return True
@@ -26,7 +26,7 @@ def palindrome(string):
 
 print(palindrome("hello")) #Completed correct 
 
-#Find the Maximum Number in a List (did not complete myself - sadface)
+# (4) Find the Maximum Number in a List (did not complete myself - sadface)
 def maximum_number(numbers):
     largest = numbers[0] #Initialises a variable to hold the largest numnber and we assume the first number is the largest
     for num in numbers: #Now we compare every number to the first one 
@@ -36,7 +36,7 @@ def maximum_number(numbers):
     
 print(maximum_number([3, 1, 4, 1, 5, 9]))
 
-#Find the Minimum Number
+# (5) Find the Minimum Number
 def minimum_number(numbers):
     smallest = numbers[0]
     for num in numbers: 
@@ -46,7 +46,7 @@ def minimum_number(numbers):
 
 print(minimum_number([3, 1, 4, 1, 5, 9]))
 
-#Count Occurrences of a Number in a List (Had help here)
+# (6) Count Occurrences of a Number in a List (Had help here)
 def count(numbers, number):
     counter = 0
     for num in numbers: #Here we loop through all the numbers individually
@@ -55,7 +55,7 @@ def count(numbers, number):
     return counter
 print(count([1, 2, 3, 4, 1, 2, 1], 1))
 
-#Count Even numbers in a list
+# (7) Count Even numbers in a list
 def count(numbers):
     counter = 0
     for num in numbers:
@@ -65,7 +65,7 @@ def count(numbers):
 print(count([1, 2, 3, 4, 5, 6]))
 print(count([11, 13, 15, 16, 18]))
 
-#Find the sum of all Odd Numbers in a List
+# (7) Find the sum of all Odd Numbers in a List
 def odd_numbers(numbers):
     total = 0 #We start with everything being added up to 0
     for num in numbers:
@@ -74,7 +74,7 @@ def odd_numbers(numbers):
     return total
 print(odd_numbers([1, 2, 3, 4, 5]))
 
-#Find the longest String in a List (Had help)
+# (8) Find the longest String in a List (Had help)
 def longest(strings):
     longest_string = strings[0]
     for string in strings:
@@ -83,7 +83,7 @@ def longest(strings):
     return longest_string
 print(longest(["apple", "banana", "cherry", "date"]))
 
-#Find the shortest string in a list 
+# (9) Find the shortest string in a list 
 def shortest(strings):
     shortest_string = strings[0]
     for string in strings:
@@ -92,7 +92,7 @@ def shortest(strings):
     return shortest_string
 print(shortest(["apple", "banana", "cherry", "fig"]))
 
-#Find the second largest number in a List (completed fucked this one up)
+# (10) Find the second largest number in a List (completed fucked this one up)
 def second_largest(numbers):
     largest = numbers[0]
     for num in numbers:
@@ -110,7 +110,7 @@ def second_largest(numbers):
 
 print(second_largest([10, 20, 4, 45, 99]))
 
-#Find all Even Numbers and their Sum (Had a bit of help)
+# (11) Find all Even Numbers and their Sum (Had a bit of help)
 def even_sum(numbers):
     #Find the even numbers first 
     even_numbers = []
@@ -122,7 +122,7 @@ def even_sum(numbers):
     return even_numbers, total
 print(even_sum([1, 2, 3, 4, 5, 6]))
 
-#Find all the Odd Numbers and their Product
+# (12) Find all the Odd Numbers and their Product
 def odd_product(numbers):
     odd_numbers = []
     product = 1 #When it is multiplication you need to start with 1 as its neutral, if it is 0 it will always be 0
@@ -133,7 +133,7 @@ def odd_product(numbers):
     return odd_numbers, product
 print(odd_product([1, 2, 3, 4, 5, 6]))
 
-#Count and Sum Negative Numbers 
+# (13) Count and Sum Negative Numbers 
 def count_sum(numbers):
     negative_numbers = []
     total = 0
@@ -144,7 +144,7 @@ def count_sum(numbers):
     return negative_numbers, total
 print(count_sum([-1, -2, 3, 4, -5, 6]))
 
-#Negative and Positive (My own attempt)
+# (14) Negative and Positive (My own attempt)
 def sep_count(numbers):
     count_neg = 0
     count_pos = 0
@@ -178,7 +178,7 @@ def sep_count(numbers):
     }
 print(sep_count([-1, -2, 3, 4, -5, 6]))
 
-#Find the longest word in a function 
+# (15) Find the longest word in a function 
 def longest_string(sentence):
     strings = sentence.split()
     longest = strings[0]
@@ -202,7 +202,7 @@ def longest_strings(strings):
 
     return longest_words, max_length  # Return all longest words and their length
 
-#Sum Numbers in a List using for i in range()
+# (16) Sum Numbers in a List using for i in range()
 #for i in range(start, stop, step)
 def sum(numbers):
     total = 0 
@@ -212,7 +212,7 @@ def sum(numbers):
         
 print(sum([1, 2, 3, 4, 5]))
 
-#Reversing a list using indexes 
+# (17) Reversing a list using indexes 
 def reverse(lst):  # Avoid using 'list' as a variable name since it's a Python keyword
     reversed_list = []  # Create an empty list to store the reversed elements
     for i in range(len(lst) - 1, -1, -1):  # Loop through indices in reverse order
@@ -221,7 +221,7 @@ def reverse(lst):  # Avoid using 'list' as a variable name since it's a Python k
 
 print(reverse([1, 2, 3, 4, 5]))  # Output: [5, 4, 3, 2, 1]
 
-#Remove all occurrences 
+# (18) Remove all occurrences 
 def removal(lst, number):
     new_list = [] #creates the new list 
     for i in range(len(lst)): #can access all the index using lst[i]
@@ -237,3 +237,116 @@ def removal(lst, number):
             new_list.append(num)
     return new_list
 print(removal([1, 2, 3, 2, 4, 2, 5], 2))
+
+# (19) Find the second smallest No. 
+def second_small(numbers):
+    # Find the smallest number
+    smallest = numbers[0]
+    for num in numbers:
+        if num < smallest:
+            smallest = num
+    
+    # Find the second smallest number
+    second = float('inf')  # Start with the largest possible value
+    for num in numbers:
+        if num != smallest and num < second:  # Skip the smallest and check for smaller numbers
+            second = num
+    return second
+print(second_small([3, 1, 4, 1, 5, 9]))  # Output: 3
+
+# (20) Count consonants in a string 
+def counting(string):
+    count = 0
+    vowels = "aeiou"
+    for char in string:
+        if char.isalpha() and char not in vowels: #For this we need to filter out non-alphabetic characters
+            count += 1
+    return count
+print(counting("hello world"))
+
+# (21) Reverse words in a sentence 
+def reverse(string):
+    reversed_words = []
+    words = string.split() #Splits the words seperatly 
+    for word in words:
+        reversed_words.append(word[::-1]) #Reverses the words
+        final_sentence = " ".join(reversed_words) #Join here adds a space between the words 
+    return final_sentence
+print(reverse("hello world"))
+
+# (22) Find the most common character (New content)
+def common_char(string):
+    count = {}  # Initialize an empty dictionary to store character counts
+
+    for char in string:  # Loop through each character in the string
+        if char != " ":  # Skip spaces
+            count[char] = count.get(char, 0) + 1  # Increment the count
+
+    # Find the character with the highest frequency
+    most_common = max(count, key=count.get)
+    return most_common
+
+# Test cases
+print(common_char("hello world"))       # Output: "l"
+print(common_char("aabbbccde"))         # Output: "b"
+print(common_char("1122334455"))        # Output: "1"
+print(common_char("Keep practicing!"))  # Output: "i"
+
+# Using a shortcut in the same code 
+def common_char(string):
+    count = {}  # Initialize an empty dictionary to store character counts
+
+    for char in string:  # Loop through each character in the string
+        if char != " ":  # Skip spaces
+            count[char] = count.get(char, 0) + 1  # Increment the count
+
+    # Find the character with the highest frequency
+    most_common = max(count, key=count.get)
+    return most_common
+
+# Test cases
+print(common_char("hello world"))       # Output: "l"
+print(common_char("aabbbccde"))         # Output: "b"
+print(common_char("1122334455"))        # Output: "1"
+print(common_char("Keep practicing!"))  # Output: "i"
+
+#If i wanted to do this and print all the terms which are repeated an equal amount 
+# 1. Find the max frequency 
+# 2. Collect all the char 
+# 3. Return the list 
+
+ def common_char(string):
+    count = {}  # Initialize an empty dictionary to store character counts
+# For example it would look like this count = {'h': 1, 'e': 1, 'l': 2, 'o': 1}
+
+    for char in string:  # Loop through each character in the string
+        if char != " ":  # Skip spaces
+            count[char] = count.get(char, 0) + 1  # Increment the count
+            # count[char] updates the count dic for current char 
+            # count.get(char, 0) checks if char is already in the dic, if it is it returns its current count, if it isnt then it returns 0 
+            # .get() is used to get values from the dic 
+            # +1 just adds 1 to the count for EACH char 
+    # Find the maximum frequency
+    max_freq = max(count.values())
+    # count.values() just retrieves the values from the dic 
+    # max() just finds the largest within the values 
+
+    # Collect all characters with the maximum frequency
+    most_common = [char for char, freq in count.items() if freq == max_freq]
+    # This creates a list of the char where the frequencies match this is the == max_freq
+    # count.items() returns the key value pairs from the dic 
+    # (char, freq) this is list comprehension 
+    return most_common
+
+# Test cases
+print(common_char("hello world"))       # Output: ['l']
+print(common_char("aabbbccde"))         # Output: ['b']
+print(common_char("1122334455"))        # Output: ['1', '2', '3', '4', '5']
+print(common_char("Keep practicing!"))  # Output: ['e', 'i']
+
+
+
+
+
+
+
